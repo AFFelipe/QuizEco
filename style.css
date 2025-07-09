@@ -1,0 +1,239 @@
+#logo {
+  width: 300px;
+  height: 300px;
+  display:flex;
+  margin: 30px auto;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f0fff4;
+  color: #1a3e1a;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
+
+.container {
+  max-width: 800px;
+  margin: 50px auto 0;
+  padding: 20px;
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.hidden {
+  opacity: 0;
+  transform: translateY(20px);
+  pointer-events: none;
+  position: absolute;
+  width: 100%;
+}
+
+.titulo {
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  margin-bottom: 70px;
+  font-size: 40px;
+  padding-top: 50px;
+  color: #2e7d32;
+}
+
+form {
+  max-width: 500px;
+  width: 90%;
+  margin: 0 auto;
+  text-align: left;
+  background-color: white;
+  padding: 40px 30px;
+  border-radius: 10px;
+  box-shadow: 0 0 15px rgba(0,0,0,0.1);
+}
+
+label {
+  display: block;
+  margin: 15px 0 5px;
+  font-weight: bold;
+  color: #2e7d32;
+}
+
+input, select {
+  display: block;
+  margin: 0 auto 15px;
+  padding: 12px;
+  width: 100%;
+  font-size: 16px;
+  box-sizing: border-box;
+  border-radius: 4px;
+  border: 1px solid #c8e6c9;
+}
+
+.button-group {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin-top: 30px;
+}
+
+button {
+  border-radius: 50px;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  margin: 10px 0;
+  padding: 12px 24px;
+  font-size: 16px;
+  cursor: pointer;
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  transition: all 0.3s ease;
+
+}
+
+.button-group{
+  display: flex;
+  justify-content:space;
+  gap: 10px;
+}
+button:hover {
+  background-color: #388e3c;
+  transform: translateY(-2px);
+}
+
+.btn-excluir {
+  background-color: #f44336 !important;
+  margin-top: 15px;
+}
+
+.btn-excluir:hover {
+  background-color: #d32f2f !important;
+}
+
+#progressoContainer {
+  width: 100%;
+  background-color: #e8f5e9;
+  border-radius: 10px;
+  margin-bottom: 30px;
+  overflow: hidden;
+}
+
+#progressoBarra {
+  height: 10px;
+  background-color: #4caf50;
+  border-radius: 10px;
+  width: 0%;
+  transition: width 0.5s ease;
+}
+
+#contadorPerguntas {
+  display: block;
+  text-align: right;
+  font-size: 0.9em;
+  color: #2e7d32;
+  margin-top: 5px;
+}
+
+#feedback {
+  margin-top: 30px;
+  padding: 15px;
+  border-radius: 5px;
+  font-weight: bold;
+  text-align: center;
+  transition: all 0.3s ease;
+}
+
+.feedback-hidden {
+  opacity: 0;
+  height: 0;
+  padding: 0 !important;
+  margin: 0 !important;
+}
+
+.feedback-certo {
+  background-color: #e8f5e9;
+  color: #2e7d32;
+  border: 1px solid #a5d6a7;
+}
+
+.feedback-errado {
+  background-color: #ffebee;
+  color: #c62828;
+  border: 1px solid #ef9a9a;
+}
+
+.usuario-card {
+  background: white;
+  margin: 15px auto;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+  transition: all 0.3s;
+  max-width: 500px;
+  text-align: left;
+}
+
+.usuario-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.usuario-card h3 {
+  color: #2e7d32;
+  margin-top: 0;
+}
+
+.lista-usuarios {
+  width: 90%;
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: left;
+}
+
+.usuario-info {
+  background-color: white;
+  padding: 20px;
+  margin-bottom: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.usuario-info h3 {
+  color: #2e7d32;
+  margin-top: 0;
+}
+
+.usuario-info p {
+  margin: 8px 0;
+}
+
+@media (max-width: 600px) {
+  .container {
+    padding: 15px;
+    margin-top: 30px;
+  }
+  
+  .titulo {
+    font-size: 30px;
+    padding-top: 30px;
+    margin-bottom: 40px;
+  }
+  
+  form {
+    padding: 20px 15px;
+  }
+  
+  button {
+    padding: 10px 20px;
+  }
+  
+  .usuario-card, .usuario-info {
+    padding: 15px;
+    margin: 10px auto;
+  }
+}
+
+#mascoteQuiz {
+  width: 250px;
+  height: 300px;
+  margin: 0 auto 20px auto;
+  display: flex;
+  justify-content: center;
+}

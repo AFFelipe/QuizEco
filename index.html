@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Quizeco - Jogo Educativo sobre Ecologia</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <header class="Logo">
+    <img src="Logo.png" alt="Logo do Quizeco" id="logo">
+  </header>
+  <div id="menu" class="container">
+    <h1 class="titulo">QUIZECO - JOGO EDUCATIVO</h1>
+    <button onclick="mostrarCadastro()">1 - Cadastro de Usuário</button>
+    <button onclick="exibirUsuarios()">2 - Exibir Usuários</button>
+    <button onclick="jogar()">3 - Jogar</button>
+  </div>
+
+  <div id="cadastro" class="container hidden">
+    <h2>Cadastro de Usuário</h2>
+    <form action="#">
+      <label for="nome">Nome:</label>
+      <input type="text" id="nome" placeholder="Nome" required>
+      
+      <label for="email">Email:</label>
+      <input type="email" id="email" placeholder="Email" required>
+      
+      <label for="idade">Idade:</label>
+      <input type="number" id="idade" placeholder="Idade" min="1" max="120" required>
+      
+      <label for="cidade">Cidade:</label>
+      <select id="cidade" required>
+        <option value="">Selecione sua cidade</option>
+        <option value="Recife">Recife</option>
+        <option value="Olinda">Olinda</option>
+        <option value="Paulista">Paulista</option>
+      </select>
+      
+      <div class="button-group">
+        <button type="button" onclick="salvarCadastro()">Salvar</button>
+        <button type="button" onclick="limparCadastro()">Limpar</button>
+        <button type="button" onclick="voltarMenu()">Voltar</button>
+      </div>
+    </form>
+  </div>
+
+  <div id="dadosUsuario" class="container hidden">
+    <h2>Usuários Cadastrados</h2>
+    <div id="infoUsuario"></div>
+    <button onclick="voltarMenu()">Voltar ao Menu</button>
+  </div>
+
+  <div id="selecionarUsuario" class="container hidden">
+    <h2>Selecione seu usuário</h2>
+    <div id="listaUsuarios"></div>
+    <button onclick="voltarMenu()">Voltar</button>
+  </div>
+
+  <div id="quiz" class="container hidden">
+    <div id="progressoContainer">
+      <div id="progressoBarra"></div>
+      <span id="contadorPerguntas">1/10</span>
+    </div>
+    <h2 id="boasVindas"></h2>
+    <div id="perguntaContainer"></div>
+    <div id="opcoes"></div>
+
+    <img src="mascote.png" alt="Mascote do Quizeco"  id="mascoteQuiz">
+
+    <div id="feedback" class="feedback-hidden"></div>
+  </div>
+
+  <div id="resultado" class="container hidden">
+    <h2>Resultado Final</h2>
+    <p id="pontuacaoFinal"></p>
+    <p id="mensagemFinal"></p>
+    <button onclick="voltarMenu()">Voltar ao Menu</button>
+  </div>
+</body>
+</html>
